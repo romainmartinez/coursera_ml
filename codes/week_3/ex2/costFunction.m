@@ -22,9 +22,9 @@ grad = zeros(size(theta));
 
 % Cost Function
 h = sigmoid(X * theta);  % m by 1
-J = 1/m * sum(-y' * log(h) - (1 - y)' * log(1 - h)); % 1 by 1
+J = 1/m * sum(-y' * log(h) - (1 - y') * log(1 - h)); % 1 by 1
 
-% Gradien
+% Gradient
 grad = 1/m * sum(X .* (h - y))'; % 3 by 1
 % =============================================================
 
